@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Detail</title>
+</head>
+<body>
+    <h1>{{ book.title }}</h1>
+    <p>Author: {{ book.author.name }}</p>
+    
+    <h2>Reviews</h2>
+    <ul>
+        {% for review in reviews %}
+        <li>{{ review.text }}</li>
+        {% empty %}
+        <li>No reviews available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
